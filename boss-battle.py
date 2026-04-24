@@ -156,7 +156,7 @@ while True:
                                         "2 - Boost🔋    (0⚡)\n"
                                         "3 - Punch🥊    (10⚡)\n"
                                         "4 - Heal💊     (10⚡)\n"
-                                        "5 - Fireball🔥 (20⚡)\n"
+                                        "5 - Stab🔪     (20⚡)\n"
                                         "Choose an attack: "
                                         ))
                         if choice < 1 or choice > 5:
