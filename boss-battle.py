@@ -136,7 +136,7 @@ while True:
 
     if hp_player > 0:
         print("You defeated the monster!🏆")
-        question = input("Do you want to proceed to the final boss fight?🕹️ (j/n): ").lower()
+        question = input("Do you want to proceed to the final boss fight?🕹️  (y/n): ").lower()
         if question == "n":
             print("Session terminated.👾")
             break
@@ -213,7 +213,7 @@ while True:
 
                 if hp_player > 0:
                     print("You defeated the dragon!🏆")
-                    question = input("Do you want fight the dragon again?🕹️  (j/n): ")
+                    question = input("Do you want fight the dragon again?🕹️  (y/n): ")
                     if question == "n":
                         print("Session terminated.👾")
                         break
@@ -222,7 +222,7 @@ while True:
 
                 else:
                     print("You died...💀")
-                    question = input("Do you want fight the dragon again?🕹️  (j/n): ").lower()
+                    question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower()
                     if question == "n":
                         print("Session terminated.👾")
                         break
@@ -231,7 +231,7 @@ while True:
 
     else:
         print("You died...💀")
-        question = input("Do you want to try again?🕹️  (j/n): ").lower()
+        question = input("Do you want to try again?🕹️  (y/n): ").lower()
         if question == "n":
             print("Session terminated.👾")
             break
