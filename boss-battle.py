@@ -136,7 +136,7 @@ while True:
 
     if hp_player > 0:
         print("You defeated the monster!🏆")
-        question = input("Do you want to proceed to the final boss fight?🕹️  (y/n): ").lower()
+        question = input("Do you want to proceed to the final boss fight?🕹️  (y/n): ").lower().strip()
         if question == "n":
             print("Session terminated.👾")
             break
@@ -176,9 +176,14 @@ while True:
                     energy_player -= attack["cost"]
 
                     if attack["name"] == "Heal💊":
-                        hp_player += attack["healing"]
-                        print()
-                        print(f"You used {attack['name']} and healed {attack['healing']} HP!")
+                        if hp_player < 100:
+                            hp_player += attack["healing"]
+                            print()
+                            print(f"You used {attack['name']} and healed {attack['healing']} HP!")
+                        else:
+                            energy_player += 10
+                            print("You cannot heal when your HP is full❌")
+                            continue
 
                     elif attack["name"] == "Boost🔋":
                         energy_player += attack["boosting"]
@@ -213,7 +218,7 @@ while True:
 
                 if hp_player > 0:
                     print("You defeated the dragon!🏆")
-                    question = input("Do you want fight the dragon again?🕹️  (y/n): ")
+                    question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower().strip()
                     if question == "n":
                         print("Session terminated.👾")
                         break
@@ -222,7 +227,7 @@ while True:
 
                 else:
                     print("You died...💀")
-                    question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower()
+                    question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower().strip()
                     if question == "n":
                         print("Session terminated.👾")
                         break
@@ -231,7 +236,7 @@ while True:
 
     else:
         print("You died...💀")
-        question = input("Do you want to try again?🕹️  (y/n): ").lower()
+        question = input("Do you want to try again?🕹️  (y/n): ").lower().strip()
         if question == "n":
             print("Session terminated.👾")
             break
