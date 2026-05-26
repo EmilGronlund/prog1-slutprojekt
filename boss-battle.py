@@ -221,7 +221,7 @@ while True:
                     question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower().strip()
                     if question == "n":
                         print("Session terminated.👾")
-                        break
+                        exit()
                     else:
                         continue
 
@@ -230,7 +230,7 @@ while True:
                     question = input("Do you want fight the dragon again?🕹️  (y/n): ").lower().strip()
                     if question == "n":
                         print("Session terminated.👾")
-                        break
+                        exit()
                     else:
                         continue
 
